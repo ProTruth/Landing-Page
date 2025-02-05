@@ -318,7 +318,7 @@ export function Home() {
 				BannerText="Be the first to know when we launch"
 				BannerActionButton={(
 					<>
-						<a href="#" className="font-semibold text-indigo-600">
+						<a href="#Join" className="font-semibold text-indigo-600">
 							<span aria-hidden="true" className="absolute inset-0" />
 							Sign Up <span aria-hidden="true">&rarr;</span>
 						</a>
