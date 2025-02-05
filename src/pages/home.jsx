@@ -218,10 +218,10 @@ export function SolutionSection() {
 				<div className="mx-auto max-w-2xl lg:text-center">
 					<h2 className="text-base/7 font-semibold text-indigo-400">Our Solution</h2>
 					<p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-balance">
-						A new breed of social networking
+						A New Era of Social Networking
 					</p>
 					<p className="mt-6 text-lg/8 text-gray-300">
-						We’re redefining online discourse by shifting the focus from endless debate to meaningful collaboration. Our platform empowers communities to identify their most pressing issues and engage in structured, constructive conversations that lead to real solutions.
+						We’re transforming online discourse by shifting the focus from endless debate to meaningful collaboration. Our platform empowers communities to identify pressing issues, engage in structured, constructive discussions, and drive real solutions.
 					</p>
 				</div>
 				<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -324,8 +324,8 @@ export function Home() {
 						</a>
 					</>
 				)}
-				Heading="You're tired of people fighting over politics"
-				Subheading="We are too. So were creating ProTruth, an open-source platform for communities to find common ground on important issues."
+				Heading="Tired of people fighting over politics?"
+				Subheading="We are too. That’s why we’re creating ProTruth—an open-source platform where communities can find common ground on issues that matter most."
 				ActionButtons={(
 					<>
 						<a
