@@ -2,16 +2,18 @@ import React from "react";
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { LuSpeech } from "react-icons/lu";
+import { FaBalanceScale } from "react-icons/fa";
+import { PiGraph } from "react-icons/pi";
 import { ArrowPathIcon, CloudArrowUpIcon, LockClosedIcon } from '@heroicons/react/20/solid'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import MailerLiteForm from '@/sections/mailerlite-form';
 
 const navigation = [
-	{ name: 'The Problem', href: '#' },
-	{ name: 'Our Solution', href: '#' },
-	{ name: 'How it works', href: '#' },
+	{ name: 'The Problem', href: '#Problem' },
+	{ name: 'Our Solution', href: '#Solution' },
+	{ name: 'Join', href: '#Join' },
 ]
-
 export function HeroSection({ Heading, Subheading, ActionButtons, BannerText, BannerActionButton }) {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -20,9 +22,6 @@ export function HeroSection({ Heading, Subheading, ActionButtons, BannerText, Ba
 			<header className="absolute inset-x-0 top-0 z-50">
 				<nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
 					<div className="flex lg:flex-1">
-						<a href="#" className="-m-1.5 p-1.5">
-							<span>ProTruth</span>
-						</a>
 					</div>
 					<div className="flex lg:hidden">
 						<button
@@ -147,31 +146,29 @@ export function HeroSection({ Heading, Subheading, ActionButtons, BannerText, Ba
 const problemPoints = [
 	{
 		name: 'Information overload',
-		description: 'Rerum repellat labore necessitatibus reprehenderit molestiae praesentium.',
+		description: 'Important issues get buried under the constant flood of new content.',
 	},
-	{ name: 'List view', description: 'Corporis asperiores ea nulla temporibus asperiores non tempore assumenda aut.' },
+	{ name: 'Polarization and Echo Chambers', description: 'We’re more divided than ever, with people consuming media that reinforces their beliefs.' },
+	{ name: 'Decline in Critical Thinking', description: 'Issues get oversimplified into “good vs. evil” narratives.' },
 	{
-		name: 'Keyboard shortcuts',
-		description: 'In sit qui aliquid deleniti et. Ad nobis sunt omnis. Quo sapiente dicta laboriosam.',
+		name: 'Mistrust in Institutions and Expertise',
+		description: 'Many people distrust science, journalism, and government, even when they provide reliable information.',
 	},
-	{ name: 'Calendars', description: 'Sed rerum sunt dignissimos ullam. Iusto iure occaecati voluptate eligendi.' },
-	{ name: 'Notifications', description: 'Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.' },
-	{ name: 'Boards', description: 'Quae sit sunt excepturi fugit veniam voluptatem ipsum commodi.' },
-	{ name: 'Reporting', description: 'Eos laudantium repellat sed architecto earum unde incidunt.' },
-	{ name: 'Mobile app', description: 'Nulla est saepe accusamus nostrum est est fugit omnis.' },
+	{ name: 'Fear of Disagreement', description: 'Without open discussion, bad ideas don’t get challenged, and good ideas don’t evolve.' },
+	{ name: 'Individualism Over Collective Action', description: 'Society tells people to focus on personal success rather than community-based solutions.' },
 ]
 export function ProblemSection() {
 	return (
-		<div className="bg-white py-24 sm:py-32">
+		<div className="bg-white py-24 sm:py-32 h-screen flex items-center justify-center">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
 					<div className="col-span-2">
 						<h2 className="text-xl font-semibold text-indigo-600">The Problem</h2>
 						<p className="mt-2 text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-							Communication and Collaboration
+							We've lost our ability to communicate
 						</p>
 						<p className="mt-6 text-base/7 text-gray-600">
-							As a society, we've lost the ability to communicate around basic issues and organize towards real change
+							As a society, we've lost the ability to find concensus around basic issues and organize towards real change
 						</p>
 					</div>
 					<dl className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">
@@ -193,30 +190,30 @@ export function ProblemSection() {
 
 const features = [
 	{
-		name: 'Push to deploy',
+		name: 'Issue-Driven Conversations',
 		description:
-			'Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu.',
+			'Unlike traditional social networks that thrive on chaos, our platform helps communities surface the most important issues through collective input.',
 		href: '#',
-		icon: CloudArrowUpIcon,
+		icon: LuSpeech,
 	},
 	{
-		name: 'SSL certificates',
+		name: 'Decentralized & Secure',
 		description:
-			'Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.',
+			'Leveraging the Bluesky AT Protocol, we provide a decentralized foundation that protects user data, ensures platform longevity, and prevents manipulation.',
 		href: '#',
-		icon: LockClosedIcon,
+		icon: PiGraph,
 	},
 	{
-		name: 'Simple queues',
+		name: 'Unbiased by Design',
 		description:
-			'Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget. Nec mollis placerat ultricies euismod.',
+			'Rather than amplifying the loudest voices or promoting divisive content, we let community-driven data determine what matters most.',
 		href: '#',
-		icon: ArrowPathIcon,
+		icon: FaBalanceScale,
 	},
 ]
 export function SolutionSection() {
 	return (
-		<div className="bg-gray-900 py-24 sm:py-32">
+		<div className="bg-gray-900 py-24 sm:py-3 h-screen flex items-center justify-center">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="mx-auto max-w-2xl lg:text-center">
 					<h2 className="text-base/7 font-semibold text-indigo-400">Our Solution</h2>
@@ -224,8 +221,7 @@ export function SolutionSection() {
 						A new breed of social networking
 					</p>
 					<p className="mt-6 text-lg/8 text-gray-300">
-						Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-						pulvinar et feugiat blandit at. In mi viverra elit nunc.
+						We’re redefining online discourse by shifting the focus from endless debate to meaningful collaboration. Our platform empowers communities to identify their most pressing issues and engage in structured, constructive conversations that lead to real solutions.
 					</p>
 				</div>
 				<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -233,16 +229,16 @@ export function SolutionSection() {
 						{features.map((feature) => (
 							<div key={feature.name} className="flex flex-col">
 								<dt className="flex items-center gap-x-3 text-base/7 font-semibold text-white">
-									<feature.icon aria-hidden="true" className="w-6 flex-none text-indigo-400" />
+									<feature.icon aria-hidden="true" className="w-7 flex-none text-indigo-400" />
 									{feature.name}
 								</dt>
 								<dd className="mt-4 flex flex-auto flex-col text-base/7 text-gray-300">
 									<p className="flex-auto">{feature.description}</p>
-									<p className="mt-6">
+									{/* <p className="mt-6">
 										<a href={feature.href} className="text-sm/6 font-semibold text-indigo-400">
 											{feature.actionText || 'Learn more'} <span aria-hidden="true">→</span>
 										</a>
-									</p>
+									</p> */}
 								</dd>
 							</div>
 						))}
@@ -314,13 +310,17 @@ export function NewsletterSection() {
 export function Home() {
 	return (
 		<>
+			<a href="#Home" className="-m-1.5 p-1.5 sticky top-2 left-2 bg-white shadow shadow-white rounded-md">
+				ProTruth
+			</a>
+			<div id="Home"></div>
 			<HeroSection
-				BannerText="We're looking for volunteer developers"
+				BannerText="Be the first to know when we launch"
 				BannerActionButton={(
 					<>
 						<a href="#" className="font-semibold text-indigo-600">
 							<span aria-hidden="true" className="absolute inset-0" />
-							Join Us <span aria-hidden="true">&rarr;</span>
+							Sign Up <span aria-hidden="true">&rarr;</span>
 						</a>
 					</>
 				)}
@@ -329,18 +329,19 @@ export function Home() {
 				ActionButtons={(
 					<>
 						<a
-							href="#"
+							href="#Join"
 							className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 						>
-							Get started
+							Sign Me Up
 						</a>
-						<a href="#/Problem" className="text-sm/6 font-semibold text-gray-900">
+						<a href="#Problem" className="text-sm/6 font-semibold text-gray-900">
 							Learn more <span aria-hidden="true">→</span>
 						</a>
 					</>
 				)}
 
 			/>
+
 			<div className="px-40">
 				<hr />
 			</div>
