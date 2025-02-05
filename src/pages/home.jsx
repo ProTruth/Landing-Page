@@ -185,7 +185,7 @@ const problemPoints = [
 ]
 export function ProblemSection() {
 	return (
-		<div className="bg-white py-24 sm:py-32 h-screen flex items-center justify-center">
+		<div className="bg-white py-24 sm:py-32 md:h-screen flex items-center justify-center">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
 					<div className="col-span-2">
@@ -239,7 +239,7 @@ const features = [
 ]
 export function SolutionSection() {
 	return (
-		<div className="bg-gray-900 py-24 sm:py-3 h-screen flex items-center justify-center">
+		<div className="bg-gray-900 py-24 sm:py-3 md:h-screen flex items-center justify-center">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="mx-auto max-w-2xl lg:text-center">
 					<h2 className="text-base/7 font-semibold text-indigo-400">Our Solution</h2>
@@ -373,7 +373,7 @@ export function Home() {
 			</div>
 			<div id="Problem"><ProblemSection /></div>
 			<div id="Solution"><SolutionSection /></div>
-			<div id="Join" className="h-[100vh] flex items-center justify-center">
+			<div id="Join" className="h-screen flex items-center justify-center">
 				{/* <NewsletterSection /> */}
 				<MailerLiteForm />
 			</div>
