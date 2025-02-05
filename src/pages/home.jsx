@@ -2,9 +2,17 @@ import React from "react";
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { LuSpeech } from "react-icons/lu";
+import { LuLibrary, LuSpeech } from "react-icons/lu";
 import { FaBalanceScale } from "react-icons/fa";
 import { PiGraph } from "react-icons/pi";
+import { GiExplosionRays } from "react-icons/gi";
+import { TbChartFunnel } from "react-icons/tb";
+import { LuBrain } from "react-icons/lu";
+import { ImLibrary } from "react-icons/im";
+import { MdCancel } from "react-icons/md";
+import { FaPersonFalling } from "react-icons/fa6";
+
+
 import { ArrowPathIcon, CloudArrowUpIcon, LockClosedIcon } from '@heroicons/react/20/solid'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import MailerLiteForm from '@/sections/mailerlite-form';
@@ -146,16 +154,34 @@ export function HeroSection({ Heading, Subheading, ActionButtons, BannerText, Ba
 const problemPoints = [
 	{
 		name: 'Information overload',
-		description: 'Important issues get buried under the constant flood of new content.',
+		description: 'Critical issues get buried under an endless flood of content.',
+		Icon: GiExplosionRays,
 	},
-	{ name: 'Polarization and Echo Chambers', description: 'We’re more divided than ever, with people consuming media that reinforces their beliefs.' },
-	{ name: 'Decline in Critical Thinking', description: 'Issues get oversimplified into “good vs. evil” narratives.' },
+	{
+		name: 'Polarization and Echo Chambers',
+		description: 'We’re more divided than ever, consuming media that reinforces our existing beliefs.',
+		Icon: TbChartFunnel
+	},
+	{
+		name: 'Decline in Critical Thinking',
+		description: 'Complex issues are reduced to oversimplified “good vs. evil” narratives.',
+		Icon: LuBrain
+	},
 	{
 		name: 'Mistrust in Institutions and Expertise',
-		description: 'Many people distrust science, journalism, and government, even when they provide reliable information.',
+		description: 'Science, journalism, and government are increasingly dismissed—even when they provide reliable information.',
+		Icon: LuLibrary
 	},
-	{ name: 'Fear of Disagreement', description: 'Without open discussion, bad ideas don’t get challenged, and good ideas don’t evolve.' },
-	{ name: 'Individualism Over Collective Action', description: 'Society tells people to focus on personal success rather than community-based solutions.' },
+	{
+		name: 'Fear of Disagreement',
+		description: 'Without open discussion, bad ideas go unchallenged, and good ideas don’t evolve.',
+		Icon: MdCancel
+	},
+	{
+		name: 'Individualism Over Collective Action',
+		description: 'Society prioritizes personal success over community-driven solutions.',
+		Icon: FaPersonFalling
+	},
 ]
 export function ProblemSection() {
 	return (
@@ -168,14 +194,14 @@ export function ProblemSection() {
 							We've lost our ability to communicate
 						</p>
 						<p className="mt-6 text-base/7 text-gray-600">
-							As a society, we've lost the ability to find concensus around basic issues and organize towards real change
+							As a society, we struggle to find consensus on even the most basic issues, making it harder to organize for real change.
 						</p>
 					</div>
 					<dl className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">
-						{problemPoints.map((point) => (
+						{problemPoints.map(({ Icon = CheckIcon, ...point }) => (
 							<div key={point.name} className="relative pl-9">
 								<dt className="font-semibold text-gray-900">
-									<CheckIcon aria-hidden="true" className="w-5 absolute left-0 top-1 size-5 text-indigo-500" />
+									<Icon aria-hidden="true" className="w-5 absolute left-0 top-1 size-5 text-indigo-500" />
 									{point.name}
 								</dt>
 								<dd className="mt-2">{point.description}</dd>
