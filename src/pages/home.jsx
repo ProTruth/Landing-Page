@@ -363,7 +363,11 @@ export function Home() {
             </a>
           </>
         )}
-        Heading="Tired of people fighting over politics?"
+        Heading={(
+          <>
+            Tired of fighting <br /> over politics?
+          </>
+        )}
         Subheading="We are too. That’s why we’re creating ProTruth—an open-source platform where communities can find common ground on issues that matter most."
         ActionButtons={(
           <>
@@ -378,7 +382,6 @@ export function Home() {
             </a>
           </>
         )}
-
       />
 
       <div className="px-40">
