@@ -11,7 +11,7 @@ import { LuBrain } from "react-icons/lu";
 import { ImLibrary } from "react-icons/im";
 import { MdCancel } from "react-icons/md";
 import { FaPersonFalling } from "react-icons/fa6";
-
+import Typewriter from 'typewriter-effect';
 
 import { ArrowPathIcon, CloudArrowUpIcon, LockClosedIcon } from '@heroicons/react/20/solid'
 import { CheckIcon } from '@heroicons/react/20/solid'
@@ -116,7 +116,7 @@ export function HeroSection({ Heading, Subheading, ActionButtons, BannerText, Ba
             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               {BannerText}{' '}
@@ -365,7 +365,15 @@ export function Home() {
         )}
         Heading={(
           <>
-            Tired of fighting <br /> over politics?
+            Tired of political tension
+            <br />
+            <Typewriter
+              options={{
+                strings: ['at the dinner table?', 'on social media?', 'in the news?', 'in your community?', 'at work?', 'with your family?', 'with your friends?'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
           </>
         )}
         Subheading="We are too. That’s why we’re creating ProTruth—an open-source platform where communities can find common ground on issues that matter most."
