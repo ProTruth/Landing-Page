@@ -245,11 +245,14 @@ export function SolutionSection() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base/7 font-semibold text-indigo-400">Our Solution</h2>
           <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-balance">
-            A New Era of Social Networking
+            The anti-social media platform
           </p>
           <p className="mt-6 text-lg/8 text-gray-300">
             We’re transforming online discourse by shifting the focus from endless debate to meaningful collaboration. Our platform empowers communities to identify pressing issues, engage in structured, constructive discussions, and drive real solutions.
           </p>
+          <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vT5GWe3iI6LqMRfYpYVEPNv6psVTRdYzCimhWzaFD9q56bzqBs1RfkmqY7_UH0ZjY48tvBxaw01vWvt/pub" className="mt-8 text-pretty text-lg underline font-medium text-gray-500 sm:text-xl/8">
+            Click Here to read the whitepaper
+          </a>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
@@ -338,9 +341,6 @@ export function HowItWorks() {
     <div className="bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">How It Works</h2>
-        <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vT5GWe3iI6LqMRfYpYVEPNv6psVTRdYzCimhWzaFD9q56bzqBs1RfkmqY7_UH0ZjY48tvBxaw01vWvt/pub" className="mt-8 text-pretty text-lg underline font-medium text-gray-500 sm:text-xl/8">
-          Click Here to learn more about the ProTruth system
-        </a>
       </div>
     </div >
   )
@@ -397,7 +397,6 @@ export function Home() {
       </div>
       <div id="Problem"><ProblemSection /></div>
       <div id="Solution"><SolutionSection /></div>
-      <div id="HowItWorks"><HowItWorks /></div>
       <div className="px-40">
         <hr />
       </div>
