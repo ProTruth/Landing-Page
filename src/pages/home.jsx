@@ -124,7 +124,7 @@ export function HeroSection({ Heading, Subheading, ActionButtons, BannerText, Ba
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
+            <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 md:text-7xl">
               {Heading}
             </h1>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
@@ -245,10 +245,12 @@ export function SolutionSection() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base/7 font-semibold text-indigo-400">Our Solution</h2>
           <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-balance">
+            ProTruth
+            <br />
             The anti-social media platform
           </p>
           <p className="mt-6 text-lg/8 text-gray-300">
-            We’re transforming online discourse by shifting the focus from endless debate to meaningful collaboration. Our platform empowers communities to identify pressing issues, engage in structured, constructive discussions, and drive real solutions.
+            Social media platforms were designed for connection, but we're using them for research. Our platform is designed from the ground up to seperate out noise from the communities collective effort toward validating information and finding common ground.
           </p>
           <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vT5GWe3iI6LqMRfYpYVEPNv6psVTRdYzCimhWzaFD9q56bzqBs1RfkmqY7_UH0ZjY48tvBxaw01vWvt/pub" className="mt-8 text-pretty text-lg underline font-medium text-gray-500 sm:text-xl/8">
             Click Here to read the whitepaper
