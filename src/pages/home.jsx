@@ -191,8 +191,8 @@ export function ProblemSection() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           <div className="col-span-2">
             <h2 className="text-xl font-semibold text-indigo-600">The Problem</h2>
-            <p className="mt-2 text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-              We've lost our ability to communicate
+            <p className="mt-2 text-pretty text-3xl font-semibold tracking-tight text-gray-900 md:text-4xl">
+              Our inability to reason has created a world of noise and conflict
             </p>
             <p className="mt-6 text-base/7 text-gray-600">
               As a society, we struggle to find consensus on even the most basic issues, making it harder to organize for real change.
