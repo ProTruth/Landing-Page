@@ -79,7 +79,7 @@ const MailerLiteForm = ({ code, trackerId, header, submitButtonContent, submitti
         </div>
         <div className="row-success" style={{ display: submitted ? 'block' : 'none' }}>
           <h2 className="text-3xl text-center">Thank you! 🎉</h2>
-          <p className="text-xl text-center">Welcome to the community -- we'll keep you posted!</p>
+          <p className="text-xl text-center">Welcome to the ProTruth community -- we'll keep you posted!</p>
         </div>
       </div>
     </>
