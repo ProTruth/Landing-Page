@@ -217,14 +217,14 @@ export function ProblemSection() {
 
 const features = [
   {
-    name: 'Issue-Driven Conversations',
+    name: 'Science-Driven Conversations',
     description:
-      'Unlike traditional social networks that thrive on chaos, our platform helps communities surface the most important issues through collective input.',
+      'Unlike traditional social networks that mimanage , ProTruth uses a .',
     href: '#',
     icon: LuSpeech,
   },
   {
-    name: 'Decentralized & Secure',
+    name: 'Decentralized & Community-Moderated',
     description:
       'Leveraging the Bluesky AT Protocol, we provide a decentralized foundation that protects user data, ensures platform longevity, and prevents manipulation.',
     href: '#',
@@ -240,19 +240,19 @@ const features = [
 ]
 export function SolutionSection() {
   return (
-    <div className="bg-gray-900 py-24 sm:py-3 md:h-screen flex items-center justify-center">
+    <div className="bg-blue-100 py-24 sm:py-3 md:h-screen flex items-center justify-center">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base/7 font-semibold text-indigo-400">Our Solution</h2>
-          <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-balance">
+          <h2 className="text-base/7 font-semibold text-indigo-600">Our Solution</h2>
+          <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight sm:text-5xl lg:text-balance">
             ProTruth
             <br />
             The anti-social media platform
           </p>
-          <p className="mt-6 text-lg/8 text-gray-300">
+          <p className="mt-6 text-lg/8 text-gray-700">
             Social media platforms were designed for connection, but we're using them for research. This has opened the door for noise and misinformation. ProTruth is designed from the ground up to seperate out noise from the communities collective effort toward validating information and finding common ground.
           </p>
-          <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vT5GWe3iI6LqMRfYpYVEPNv6psVTRdYzCimhWzaFD9q56bzqBs1RfkmqY7_UH0ZjY48tvBxaw01vWvt/pub" className="mt-8 text-pretty text-lg underline font-medium text-gray-500 sm:text-xl/8">
+          <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vT5GWe3iI6LqMRfYpYVEPNv6psVTRdYzCimhWzaFD9q56bzqBs1RfkmqY7_UH0ZjY48tvBxaw01vWvt/pub" className="mt-8 text-pretty text-lg underline font-medium text-gray-700 sm:text-xl/8">
             Click Here to read the whitepaper
           </a>
         </div>
@@ -260,11 +260,11 @@ export function SolutionSection() {
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {features.map((feature) => (
               <div key={feature.name} className="flex flex-col">
-                <dt className="flex items-center gap-x-3 text-base/7 font-semibold text-white">
-                  <feature.icon aria-hidden="true" className="w-7 flex-none text-indigo-400" />
+                <dt className="flex items-center gap-x-3 text-base/7 font-semibold">
+                  <feature.icon aria-hidden="true" className="w-7 flex-none text-indigo-600" />
                   {feature.name}
                 </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base/7 text-gray-300">
+                <dd className="mt-4 flex flex-auto flex-col text-base/7 text-gray-800">
                   <p className="flex-auto">{feature.description}</p>
                   {/* <p className="mt-6">
 										<a href={feature.href} className="text-sm/6 font-semibold text-indigo-400">
