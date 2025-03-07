@@ -247,10 +247,10 @@ export function SolutionSection() {
           <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight sm:text-5xl lg:text-balance">
             ProTruth
             <br />
-            The anti-social media platform
+            The <em><u>anti</u></em>-social media platform
           </p>
           <p className="mt-6 text-lg/8 text-gray-700">
-            Social media platforms were designed for connection, but we're using them for research. This has opened the door for noise and misinformation. ProTruth is designed from the ground up to seperate out noise from the communities collective effort toward validating information and finding common ground.
+            Social media platforms were designed for connection, but we're using them for research. This has opened the door for noise and misinformation. ProTruth is designed from the ground up to seperate out noise from quality data while maintaining a feel of a traditional social-media experience.
           </p>
           <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vT5GWe3iI6LqMRfYpYVEPNv6psVTRdYzCimhWzaFD9q56bzqBs1RfkmqY7_UH0ZjY48tvBxaw01vWvt/pub" className="mt-8 text-pretty text-lg underline font-medium text-gray-700 sm:text-xl/8">
             Click Here to read the whitepaper
