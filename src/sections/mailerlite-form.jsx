@@ -11,7 +11,7 @@ const MailerLiteForm = ({ code, trackerId, header, submitButtonContent, submitti
       const formData = new FormData();
       formData.append('fields[email]', email);
 
-      await fetch('https://assets.mailerlite.com/jsonp/1313600/forms/145376291816736319/subscribe', {
+      await fetch('https://assets.mailerlite.com/jsonp/1372210/forms/148183606747989952/subscribe', {
         method: 'POST',
         body: formData,
       });
