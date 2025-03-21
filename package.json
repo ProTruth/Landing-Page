@@ -7,9 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy:patch": "npm run verify-on-main-branch && npm version patch && next build && gh-pages -d doc --nojekyll",
-    "deploy:minor": "npm run verify-on-main-branch && npm version minor && next build && gh-pages -d doc --nojekyll",
-    "deploy:major": "npm run verify-on-main-branch && npm version major && next build && gh-pages -d doc --nojekyll",
+    "deploy:patch": "npm run verify-on-main-branch && npm version patch && vite build && gh-pages -d dist --nojekyll",
+    "deploy:minor": "npm run verify-on-main-branch && npm version minor && vite build && gh-pages -d dist --nojekyll",
+    "deploy:major": "npm run verify-on-main-branch && npm version major && vite build && gh-pages -d dist --nojekyll",
     "verify-on-main-branch": "git rev-parse --abbrev-ref HEAD | grep -q '^main$' && echo 'You are on the main branch.' || (echo 'You are NOT on the main branch. Aborting deployment.' && exit 1)"
   },
   "dependencies": {
