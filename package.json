@@ -1,35 +1,40 @@
 {
-	"name": "protruth-landing-page",
-	"private": true,
-	"version": "2.1.2",
-	"type": "module",
-	"scripts": {
-		"dev": "vite",
-		"build": "vite build",
-		"preview": "vite preview"
-	},
-	"dependencies": {
-		"@headlessui/react": "^2.2.0",
-		"@heroicons/react": "2.0.18",
-		"@material-tailwind/react": "2.1.4",
-		"clsx": "^2.1.1",
-		"framer-motion": "^12.0.0",
-		"prop-types": "15.8.1",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
-		"react-icons": "^5.4.0",
-		"react-router-dom": "6.17.0",
-		"typewriter-effect": "^2.21.0"
-	},
-	"devDependencies": {
-		"@types/react": "18.2.31",
-		"@types/react-dom": "18.2.14",
-		"@vitejs/plugin-react": "4.1.0",
-		"autoprefixer": "10.4.16",
-		"postcss": "8.4.31",
-		"prettier": "3.0.3",
-		"prettier-plugin-tailwindcss": "0.5.6",
-		"tailwindcss": "3.3.4",
-		"vite": "4.5.0"
-	}
+  "name": "protruth-landing-page",
+  "private": true,
+  "version": "2.1.2",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy:patch": "npm run verify-on-main-branch && npm version patch && next build && gh-pages -d doc --nojekyll",
+    "deploy:minor": "npm run verify-on-main-branch && npm version minor && next build && gh-pages -d doc --nojekyll",
+    "deploy:major": "npm run verify-on-main-branch && npm version major && next build && gh-pages -d doc --nojekyll",
+    "verify-on-main-branch": "git rev-parse --abbrev-ref HEAD | grep -q '^main$' && echo 'You are on the main branch.' || (echo 'You are NOT on the main branch. Aborting deployment.' && exit 1)"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "2.0.18",
+    "@material-tailwind/react": "2.1.4",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.0.0",
+    "prop-types": "15.8.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^5.4.0",
+    "react-router-dom": "6.17.0",
+    "typewriter-effect": "^2.21.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.31",
+    "@types/react-dom": "18.2.14",
+    "@vitejs/plugin-react": "4.1.0",
+    "autoprefixer": "10.4.16",
+    "gh-pages": "6.3.0",
+    "postcss": "8.4.31",
+    "prettier": "3.0.3",
+    "prettier-plugin-tailwindcss": "0.5.6",
+    "tailwindcss": "3.3.4",
+    "vite": "4.5.0"
+  }
 }
