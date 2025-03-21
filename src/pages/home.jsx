@@ -219,7 +219,7 @@ const features = [
   {
     name: 'Science-Driven Conversations',
     description:
-      'Unlike traditional social networks that mimanage , ProTruth uses a .',
+      'On ProTruth, data is king. All posts are initially unweighted, and the community determines the value of each post based on the quality of the data provided.',
     href: '#',
     icon: LuSpeech,
   },
@@ -247,10 +247,10 @@ export function SolutionSection() {
           <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight sm:text-5xl lg:text-balance">
             ProTruth
             <br />
-            The <em><u>anti</u></em>-social media platform
+            Debate Moderation at Scale
           </p>
           <p className="mt-6 text-lg/8 text-gray-700">
-            Social media platforms were designed for connection, but we're using them for research. This has opened the door for noise and misinformation. ProTruth is designed from the ground up to seperate out noise from quality data while maintaining a feel of a traditional social-media experience.
+            In an age where we have access to more data and are more connected than ever, our debates often resemble the days of of small villages. ProTruth revolutionizes the way we engage in discussions by providing a platform that empowers communities to break down complex issues and validate information collaboratively. With a commitment to unbiased dialogue from the ground up, ProTruth fosters informed conversations that bridge divides and promote understanding.
           </p>
           <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vT5GWe3iI6LqMRfYpYVEPNv6psVTRdYzCimhWzaFD9q56bzqBs1RfkmqY7_UH0ZjY48tvBxaw01vWvt/pub" className="mt-8 text-pretty text-lg underline font-medium text-gray-700 sm:text-xl/8">
             Click Here to read the whitepaper
