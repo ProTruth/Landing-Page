@@ -1,29 +1,22 @@
 import React from "react";
-import { useState } from 'react'
-import { Dialog, DialogPanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { LuLibrary, LuSpeech } from "react-icons/lu";
 import { FaBalanceScale } from "react-icons/fa";
 import { PiGraph } from "react-icons/pi";
 import { GiExplosionRays } from "react-icons/gi";
 import { TbChartFunnel } from "react-icons/tb";
 import { LuBrain } from "react-icons/lu";
-import { ImLibrary } from "react-icons/im";
 import { MdCancel } from "react-icons/md";
 import { FaPersonFalling } from "react-icons/fa6";
 import Typewriter from 'typewriter-effect';
 
-import { ArrowPathIcon, CloudArrowUpIcon, LockClosedIcon } from '@heroicons/react/20/solid'
 import { CheckIcon } from '@heroicons/react/20/solid'
-import MailerLiteForm from '@/sections/mailerlite-form';
-import { Button } from '@/components/catalyst-ui/button';
 
-const navigation = [
-  { name: 'The Problem', href: '#Problem' },
-  { name: 'Our Solution', href: '#Solution' },
-  { name: 'Join', href: '#Join' },
-]
 export function HeroSection({ Heading, Subheading, ActionButtons, BannerText, BannerActionButton }) {
+  const navigation = [
+    { name: 'The Problem', href: '#Problem' },
+    { name: 'Our Solution', href: '#Solution' },
+    { name: 'Join', href: '#Join' },
+  ]
   return (
     <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
@@ -94,39 +87,40 @@ export function HeroSection({ Heading, Subheading, ActionButtons, BannerText, Ba
   )
 }
 
-const problemPoints = [
-  {
-    name: 'Information overload',
-    description: 'Critical issues get buried under an endless flood of content.',
-    Icon: GiExplosionRays,
-  },
-  {
-    name: 'Polarization and Echo Chambers',
-    description: 'We’re more divided than ever, consuming media that reinforces our existing beliefs.',
-    Icon: TbChartFunnel
-  },
-  {
-    name: 'Decline in Critical Thinking',
-    description: 'Complex issues are reduced to oversimplified “good vs. evil” narratives.',
-    Icon: LuBrain
-  },
-  {
-    name: 'Mistrust in Institutions and Expertise',
-    description: 'Science, journalism, and government are increasingly dismissed—even when they provide reliable information.',
-    Icon: LuLibrary
-  },
-  {
-    name: 'Fear of Disagreement',
-    description: 'Without open discussion, bad ideas go unchallenged, and good ideas don’t evolve.',
-    Icon: MdCancel
-  },
-  {
-    name: 'Individualism Over Collective Action',
-    description: 'Society prioritizes personal success over community-driven solutions.',
-    Icon: FaPersonFalling
-  },
-]
 export function ProblemSection() {
+  const problemPoints = [
+    {
+      name: 'Information overload',
+      description: 'Critical issues get buried under an endless flood of content.',
+      Icon: GiExplosionRays,
+    },
+    {
+      name: 'Polarization and Echo Chambers',
+      description: 'We’re more divided than ever, consuming media that reinforces our existing beliefs.',
+      Icon: TbChartFunnel
+    },
+    {
+      name: 'Decline in Critical Thinking',
+      description: 'Complex issues are reduced to oversimplified “good vs. evil” narratives.',
+      Icon: LuBrain
+    },
+    {
+      name: 'Mistrust in Institutions and Expertise',
+      description: 'Science, journalism, and government are increasingly dismissed—even when they provide reliable information.',
+      Icon: LuLibrary
+    },
+    {
+      name: 'Fear of Disagreement',
+      description: 'Without open discussion, bad ideas go unchallenged, and good ideas don’t evolve.',
+      Icon: MdCancel
+    },
+    {
+      name: 'Individualism Over Collective Action',
+      description: 'Society prioritizes personal success over community-driven solutions.',
+      Icon: FaPersonFalling
+    },
+  ]
+
   return (
     <div className="bg-white py-24 sm:py-32 md:h-screen flex items-center justify-center">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -157,30 +151,30 @@ export function ProblemSection() {
   )
 }
 
-const features = [
-  {
-    name: 'Science-Driven Conversations',
-    description:
-      'On ProTruth, data is king. All posts are initially unweighted, and the community determines the value of each post based on the quality of the data provided.',
-    href: '#',
-    icon: LuSpeech,
-  },
-  {
-    name: 'Decentralized & Community-Moderated',
-    description:
-      'Leveraging the Bluesky AT Protocol, we provide a decentralized foundation that protects user data, ensures platform longevity, and prevents manipulation.',
-    href: '#',
-    icon: PiGraph,
-  },
-  {
-    name: 'Unbiased by Design',
-    description:
-      'Rather than amplifying the loudest voices or promoting divisive content, we let community-driven data determine what matters most.',
-    href: '#',
-    icon: FaBalanceScale,
-  },
-]
 export function SolutionSection() {
+  const features = [
+    {
+      name: 'Science-Driven Conversations',
+      description:
+        'On ProTruth, data is king. All posts are initially unweighted, and the community determines the value of each post based on the quality of the data provided.',
+      href: '#',
+      icon: LuSpeech,
+    },
+    {
+      name: 'Decentralized & Community-Moderated',
+      description:
+        'Leveraging the Bluesky AT Protocol, we provide a decentralized foundation that protects user data, ensures platform longevity, and prevents manipulation.',
+      href: '#',
+      icon: PiGraph,
+    },
+    {
+      name: 'Unbiased by Design',
+      description:
+        'Rather than amplifying the loudest voices or promoting divisive content, we let community-driven data determine what matters most.',
+      href: '#',
+      icon: FaBalanceScale,
+    },
+  ]
   return (
     <div className="bg-blue-100 py-24 sm:py-3 md:h-screen flex items-center justify-center">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -268,7 +262,7 @@ export function Home() {
           <>
             <a
               href="#Join"
-              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Sign Me Up
             </a>
