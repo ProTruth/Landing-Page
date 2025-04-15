@@ -37,7 +37,7 @@ export default function Example() {
 								<img
 									alt=""
 									src={post.imageUrl}
-									className="aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+									className="aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-2/1 lg:aspect-3/2"
 								/>
 								<div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
 							</div>
