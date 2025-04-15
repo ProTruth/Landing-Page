@@ -1,15 +1,15 @@
 import React from "react";
-import { LuLibrary, LuSpeech } from "react-icons/lu";
-import { FaBalanceScale } from "react-icons/fa";
-import { PiGraph } from "react-icons/pi";
-import { GiExplosionRays } from "react-icons/gi";
-import { TbChartFunnel } from "react-icons/tb";
-import { LuBrain } from "react-icons/lu";
-import { MdCancel } from "react-icons/md";
-import { FaPersonFalling } from "react-icons/fa6";
+import { AcademicCapIcon, ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/outline";
+import { ScaleIcon } from "@heroicons/react/24/outline";
+import { ChartBarIcon } from "@heroicons/react/24/outline";
+import { SparklesIcon } from "@heroicons/react/24/outline";
+import { FunnelIcon } from "@heroicons/react/24/outline";
+import { XCircleIcon } from "@heroicons/react/24/outline";
+import { UserMinusIcon } from "@heroicons/react/24/outline";
+import { CalculatorIcon } from "@heroicons/react/24/outline";
+import { CheckIcon } from '@heroicons/react/20/solid'
 import Typewriter from 'typewriter-effect';
 
-import { CheckIcon } from '@heroicons/react/20/solid'
 
 export function HeroSection({ Heading, Subheading, ActionButtons, BannerText, BannerActionButton }) {
   const navigation = [
@@ -87,39 +87,39 @@ export function HeroSection({ Heading, Subheading, ActionButtons, BannerText, Ba
   )
 }
 
+const problemPoints = [
+  {
+    name: 'Information overload',
+    description: 'Critical issues get buried under an endless flood of content.',
+    Icon: SparklesIcon,
+  },
+  {
+    name: 'Polarization and Echo Chambers',
+    description: 'We’re more divided than ever, consuming media that reinforces our existing beliefs.',
+    Icon: FunnelIcon,
+  },
+  {
+    name: 'Decline in Critical Thinking',
+    description: 'Complex issues are reduced to oversimplified “good vs. evil” narratives.',
+    Icon: CalculatorIcon,
+  },
+  {
+    name: 'Mistrust in Institutions and Expertise',
+    description: 'Science, journalism, and government are increasingly dismissed—even when they provide reliable information.',
+    Icon: AcademicCapIcon,
+  },
+  {
+    name: 'Fear of Disagreement',
+    description: 'Without open discussion, bad ideas go unchallenged, and good ideas don’t evolve.',
+    Icon: XCircleIcon,
+  },
+  {
+    name: 'Individualism Over Collective Action',
+    description: 'Society prioritizes personal success over community-driven solutions.',
+    Icon: UserMinusIcon,
+  },
+]
 export function ProblemSection() {
-  const problemPoints = [
-    {
-      name: 'Information overload',
-      description: 'Critical issues get buried under an endless flood of content.',
-      Icon: GiExplosionRays,
-    },
-    {
-      name: 'Polarization and Echo Chambers',
-      description: 'We’re more divided than ever, consuming media that reinforces our existing beliefs.',
-      Icon: TbChartFunnel
-    },
-    {
-      name: 'Decline in Critical Thinking',
-      description: 'Complex issues are reduced to oversimplified “good vs. evil” narratives.',
-      Icon: LuBrain
-    },
-    {
-      name: 'Mistrust in Institutions and Expertise',
-      description: 'Science, journalism, and government are increasingly dismissed—even when they provide reliable information.',
-      Icon: LuLibrary
-    },
-    {
-      name: 'Fear of Disagreement',
-      description: 'Without open discussion, bad ideas go unchallenged, and good ideas don’t evolve.',
-      Icon: MdCancel
-    },
-    {
-      name: 'Individualism Over Collective Action',
-      description: 'Society prioritizes personal success over community-driven solutions.',
-      Icon: FaPersonFalling
-    },
-  ]
 
   return (
     <div className="bg-white py-24 sm:py-32 md:h-screen flex items-center justify-center">
@@ -158,21 +158,21 @@ export function SolutionSection() {
       description:
         'On ProTruth, data is king. All posts are initially unweighted, and the community determines the value of each post based on the quality of the data provided.',
       href: '#',
-      icon: LuSpeech,
+      icon: ChatBubbleBottomCenterTextIcon,
     },
     {
       name: 'Decentralized & Community-Moderated',
       description:
         'Leveraging the Bluesky AT Protocol, we provide a decentralized foundation that protects user data, ensures platform longevity, and prevents manipulation.',
       href: '#',
-      icon: PiGraph,
+      icon: ChartBarIcon,
     },
     {
       name: 'Unbiased by Design',
       description:
         'Rather than amplifying the loudest voices or promoting divisive content, we let community-driven data determine what matters most.',
       href: '#',
-      icon: FaBalanceScale,
+      icon: ScaleIcon,
     },
   ]
   return (
