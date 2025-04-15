@@ -24,23 +24,11 @@ const navigation = [
   { name: 'Join', href: '#Join' },
 ]
 export function HeroSection({ Heading, Subheading, ActionButtons, BannerText, BannerActionButton }) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
   return (
     <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
-          </div>
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="size-6" />
-            </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
@@ -55,52 +43,6 @@ export function HeroSection({ Heading, Subheading, ActionButtons, BannerText, Ba
 						</a> */}
           </div>
         </nav>
-        <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
-          <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
-                <img
-                  alt=""
-                  src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                  className="h-8 w-auto"
-                />
-              </a>
-              <button
-                type="button"
-                onClick={() => setMobileMenuOpen(false)}
-                className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              >
-                <span className="sr-only">Close menu</span>
-                <XMarkIcon aria-hidden="true" className="size-6" />
-              </button>
-            </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-                <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
-                </div>
-              </div>
-            </div>
-          </DialogPanel>
-        </Dialog>
       </header>
 
       <div className="relative isolate px-6 pt-14 lg:px-8">
@@ -281,63 +223,6 @@ export function SolutionSection() {
   )
 }
 
-export function NewsletterSection() {
-  return (
-    <div className="bg-white py-16 sm:py-24">
-      <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:py-32">
-          <h2 className="mx-auto max-w-3xl text-center text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Join the ProTruth Movement
-          </h2>
-          <p className="mx-auto mt-6 max-w-lg text-center text-lg text-gray-300">
-            Sign up below to get notified when we launch and receive updates on our progress.
-          </p>
-          <form className="mx-auto mt-10 flex max-w-md gap-x-4">
-            <label htmlFor="email-address" className="sr-only">
-              Email address
-            </label>
-            <input
-              id="email-address"
-              name="email"
-              type="email"
-              required
-              placeholder="Enter your email"
-              autoComplete="email"
-              className="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-white sm:text-sm/6"
-            />
-            <button
-              type="submit"
-              className="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
-              Notify me
-            </button>
-          </form>
-          <svg
-            viewBox="0 0 1024 1024"
-            aria-hidden="true"
-            className="absolute left-1/2 top-1/2 -z-10 size-[64rem] -translate-x-1/2"
-          >
-            <circle r={512} cx={512} cy={512} fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fillOpacity="0.7" />
-            <defs>
-              <radialGradient
-                r={1}
-                cx={0}
-                cy={0}
-                id="759c1415-0410-454c-8f7c-9a820de03641"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(512 512) rotate(90) scale(512)"
-              >
-                <stop stopColor="#7775D6" />
-                <stop offset={1} stopColor="#E935C1" stopOpacity={0} />
-              </radialGradient>
-            </defs>
-          </svg>
-        </div>
-      </div>
-    </div>
-  )
-}
-
 export function HowItWorks() {
   return (
     <div className="bg-white px-6 py-24 sm:py-32 lg:px-8">
@@ -393,19 +278,8 @@ export function Home() {
           </>
         )}
       />
-
-      <div className="px-40">
-        <hr />
-      </div>
       <div id="Problem"><ProblemSection /></div>
       <div id="Solution"><SolutionSection /></div>
-      <div className="px-40">
-        <hr />
-      </div>
-      <div id="Join" className="h-screen flex items-center justify-center">
-        {/* <NewsletterSection /> */}
-        <MailerLiteForm />
-      </div>
     </>
   );
 }
